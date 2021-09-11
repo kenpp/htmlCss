@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>縦方向の行揃え</title>
+<style>
+.flex-parent {
+  display: flex;
+  padding: 4px;
+  width: 400px;
+  border: 3px solid #e29238;
+}
+.start {
+  align-items: flex-start;
+}
+.center {
+  align-items: center;
+}
+.end {
+  align-items: flex-end;
+}
+.child {
+  padding: 4px 8px;
+  background: #2483c7;
+  color: white;
+  margin-right: 4px;
+}
+.child:last-child {
+  margin-right: 0;
+}
+</style>
+</head>
+<body>
+
+<h4>ボックスの高さが揃う（初期設定）</h4>
+<div class="flex-parent">
+  <div class="child">Child <b>1</b></div>
+  <div class="child">Child <b>2</b><br>Child 2は文字が多いぞ</div>
+  <div class="child">Child <b>3</b></div>
+</div>
+
+<h4>上端揃え</h4>
+<div class="flex-parent start">
+  <div class="child">Child <b>1</b></div>
+  <div class="child">Child <b>2</b><br>Child 2は文字が多いぞ</div>
+  <div class="child">Child <b>3</b></div>
+</div>
+
+<h4>上下中央揃え</h4>
+<div class="flex-parent center">
+  <div class="child">Child <b>1</b></div>
+  <div class="child">Child <b>2</b><br>Child 2は文字が多いぞ</div>
+  <div class="child">Child <b>3</b></div>
+</div>
+
+<h4>下端揃え</h4>
+<div class="flex-parent end">
+  <div class="child">Child <b>1</b></div>
+  <div class="child">Child <b>2</b><br>Child 2は文字が多いぞ</div>
+  <div class="child">Child <b>3</b></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>グリッドレイアウト align-itemsプロパティ</title>
+<style>
+html * { box-sizing: border-box; }
+body { margin: 0; }
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.side-latest {
+  margin: 1em;
+  padding: 0;
+  width: 400px;
+}
+.side-latest p {
+  margin: 0;
+  font-size: .85rem;
+  background: #f0f6e2;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 10px;
+
+  margin-bottom: 10px;
+}
+.stretch {
+  justify-items: stretch; /* 初期設定値 */
+}
+.start {
+  justify-items: start;
+}
+.center {
+  justify-items: center;
+}
+.end {
+  justify-items: end;
+}
+</style>
+</head>
+<body>
+
+<ul class="side-latest">
+  <li class="grid stretch">
+    <div><img src="images/latest-photo1-square.jpg" alt=""></div>
+    <p>justify-items: <strong>stretch</strong>;<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </li>
+  <li class="grid start">
+    <div><img src="images/latest-photo1-square.jpg" alt=""></div>
+    <p>justify-items: <strong>start</strong>;<br>Lorem ipsum dolor sit amet</p>
+  </li>
+  <li class="grid center">
+    <div><img src="images/latest-photo1-square.jpg" alt=""></div>
+    <p>justify-items: <strong>center</strong>;<br>Lorem ipsum dolor sit amet</p>
+  </li>
+  <li class="grid end">
+    <div><img src="images/latest-photo1-square.jpg" alt=""></div>
+    <p>justify-items: <strong>end</strong>;<br>Lorem ipsum dolor sit amet</p>
+  </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>flex-directionプロパティ</title>
+<style>
+.container {
+  display: flex;
+  border: 3px solid #cde7f9;
+  padding: 4px;
+}
+.child {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  background: #2483c7;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+
+  /* 数字を中央に配置 */
+  display: grid;
+  place-items: center;
+}
+
+.row {
+
+}
+.column {
+  flex-direction: column;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.column-reverse {
+  flex-direction: column-reverse;
+}
+</style>
+</head>
+<body>
+
+<h4>flex-direction: row;</h4>
+<div class="container row">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div>
+
+<h4>flex-direction: column;</h4>
+<div class="container column">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div>
+
+<h4>flex-direction: row-reverse;</h4>
+<div class="container row-reverse">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div>
+
+<h4>flex-direction: column-reverse;</h4>
+<div class="container column-reverse">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+</div>
+
+</body>
+</html>

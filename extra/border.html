@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>borderプロパティ</title>
+<style>
+html * {
+  box-sizing: border-box;
+}
+.border {
+  margin: 1em 0;
+  width: 200px;
+  height: 40px;
+  background: #cde9ef;
+  border: 5px solid #28b0b4;
+  color: #28b0b4;
+  text-align: center;
+}
+.none { border-style: none; }
+.hidden { border-style: hidden; }
+.dotted { border-style: dotted; }
+.dashed { border-style: dashed; }
+.double { border-style: double; }
+.groove { border-style: groove; }
+.ridge { border-style: ridge; }
+.inset { border-style: inset; }
+.outset { border-style: outset; }
+</style>
+</head>
+<body>
+
+<div class="border none">none</div>
+<div class="border hidden">hidden</div>
+<div class="border dotted">dotted</div>
+<div class="border dashed">dashed</div>
+<div class="border solid">solid</div>
+<div class="border double">double</div>
+<div class="border groove">groove</div>
+<div class="border ridge">ridge</div>
+<div class="border inset">inset</div>
+<div class="border outset">outset</div>
+
+</body>
+</html>

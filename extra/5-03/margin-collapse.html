@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>margin-collapse</title>
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  margin: 0 auto 60px;
+  max-width: 768px;
+}
+.parent {
+  background: #eee;
+}
+.border {
+  border: 3px solid red;
+}
+</style>
+</head>
+<body>
+
+<main>
+  <div class="container">
+
+  <h1>マージンのたたみ込みが発生するパターン</h1>
+
+    <h2>1. 隣接する兄弟要素</h2>
+    <p>1段落目。上下に1emのデフォルトマージンがありますが、この要素の下マージンと次の要素の上マージンがたたみ込まれます。つまり、1段落目の&lt;p&gt;と2段落目の&lt;p&gt;のあいだに2emでなく、1emのマージンが空くことになります。</p>
+    <p>2段落目。上下に1emのデフォルトマージンがあります。</p>
+
+    <h2>2. 親要素と子要素</h2>
+    <div class="parent">
+      <p>親要素&lt;div class=&quot;parent&quot;&gt;に含まれる最初の子要素&lt;p&gt;。この場合、親要素の上マージンと子要素の上マージンがたたみ込まれます。</p>
+      <p>2番目の子要素。</p>
+      <p>3番目（最後）の子要素。親要素の下マージンと最後の子要素の下マージンがたたみ込まれます。</p>
+    </div>
+
+    <h3>Point! パディングやボーダーがあるとマージンが隣接しないためたたみ込まれない</h3>
+    <div class="parent border">
+      <p>親要素&lt;div class=&quot;parent&quot;&gt;に含まれる最初の子要素&lt;p&gt;。この場合、親要素の上マージンと子要素の上マージンがたたみ込まれます。</p>
+      <p>2番目の子要素。</p>
+      <p>3番目（最後）の子要素。親要素の下マージンと最後の子要素の下マージンがたたみ込まれます。</p>
+    </div>
+
+    <h2>3. 高さがゼロ、コンテンツが空の要素</h2>
+    <p style="height:0;"></p>
+
+    <h2>4. 異なるレンダリングコンテクストにあるマージン同士はたたみ込まれない。</h2>
+    <div style="display: flow-root;" class="border">
+      <p style="float: left;"><img src="banner-2.png" alt="" style="float:left;width:250px;margin-right:1em;">親要素&lt;div class="border"&gt;に画像&lt;img&gt;とこのテキストの段落&lt;p&gt;には「float:left;」が適用されています。floatになっているので親要素と子要素のマージンはたたみ込まれません。floatだけでなく、position、flexbox、gridなどでもたたみ込まれません。</p>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

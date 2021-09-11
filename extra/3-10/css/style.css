@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+/* フォント */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400; /* Noto Sans JPのレギュラーウェイトを指定 */
+}
+/* おもな太字タグのフォントウェイト設定 */
+h1, h2, h3, h4, h5, h6, th, strong {
+  font-weight: 700;
+}
+/* ベースのリンクカラー */
+a {
+  color: #f30;
+}
+
+/* レスポンシブイメージと画像下スペース防止 */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;/* 画像下のスペースを消す */
+}
+
+/**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+ /**
+  * ***************************************
+  * ［post.html］記事ページ - メインコンテナ
+  * ***************************************
+  */
+.post .main-container {
+  padding: 80px 4% 0 4%;
+  background: url(../images/post-bg.svg) repeat-x;
+  background-position: 0 10px;
+}
+@media (min-width: 768px) {
+  .post .main-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 80px 20px 0 20px;
+  }
+}
+
+ /**
+  * ---------------------------------------
+  * ［post.html］記事ページ - モジュール
+  */
+
+ /**
+  * ---------------------------------------
+  * ポストヘッダー
+  */
+.post-header {
+  margin-bottom: 60px;
+}
+.post-header h1 {
+  margin: 0 0 20px 0;/* h1のデフォルト設定オフ */
+  font-size: 1.875rem;
+  line-height: 1.5;
+}
+
+ /**
+  * ---------------------------------------
+  * ポストコンテンツ
+  */
+.post-contents {
+  margin: 0 0 60px 0;
+}
+@media (min-width: 768px) {
+  .post-contents {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+}
+/* post-contentsの1つ目の要素の上マージンを0にする */
+.post-contents > *:first-child {
+  margin-top: 0;
+}
+
+/* キャプション付きの画像 */
+.photo-caption {
+  margin: 30px 0;
+}
+.photo-caption figcaption {
+  margin-top: 5px;
+  font-size: .75rem;
+  color: #747474;
+  text-align: center;
+}
+

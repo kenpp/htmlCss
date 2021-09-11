@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+/* フォント */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400; /* Noto Sans JPのレギュラーウェイトを指定 */
+}
+/* おもな太字タグのフォントウェイト設定 */
+h1, h2, h3, h4, h5, h6, th, strong {
+  font-weight: 700;
+}
+/* ベースのリンクカラー */
+a {
+  color: #f30;
+}
+
+/* レスポンシブイメージと画像下スペース防止 */
+img, figure {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;/* 画像下のスペースを消す */
+}
+
+/**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ *
+ * ［post.html］記事ページ - メインコンテナ
+ */
+.post .main-container {
+  padding: 80px 4% 0 4%;
+  background: url(../images/post-bg.svg) repeat-x;
+  background-position: 0 10px;
+}
+@media (min-width: 768px) {
+  .post .main-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 80px 20px 0 20px;
+  }
+}
+
+/**
+ * ---------------------------------------
+ * ［post.html］記事ページ - モジュール
+ */
+
+/**
+ * ---------------------------------------
+ * ポストヘッダー
+ */
+.post-header {
+  margin-bottom: 60px;
+}
+.post-info {
+  margin-bottom: 3px;
+  padding-bottom: 15px;
+  font-size: .75rem;
+  text-align: right;
+}
+.post-info a {
+  margin: 0;
+  padding-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+.post-info i {
+  padding-right: 5px;
+  color: #73cbd6;
+}
+
