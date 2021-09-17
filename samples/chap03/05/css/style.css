@@ -10,18 +10,22 @@ html *,
 ::after {
   box-sizing: border-box;
 }
+
 /* フォント */
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
+
 body {
   font-family: sans-serif;
 }
+
 /* ベースのリンクカラー */
 a {
   color: #f30;
@@ -31,7 +35,8 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: bottom;/* 画像下のスペースを消す */
+  vertical-align: bottom;
+  /* 画像下のスペースを消す */
 }
 
 /**
@@ -45,6 +50,7 @@ img {
   background: url(../images/header-topline.svg) repeat-x;
   border-bottom: 1px solid #d8d8d8;
 }
+
 @media (min-width: 768px) {
   .header-container {
     margin: 0 auto;
@@ -66,14 +72,19 @@ img {
  * パンくずリストコンテナ
  */
 .breadcrumb {
-  display: none;/* モバイルで非表示 */
+  display: none;
+  /* モバイルで非表示 */
 }
+
 @media (min-width: 768px) {
+
   /* PCだけスタイル適用 */
   .breadcrumb {
-    display: block;/* display:noneの解除 */
+    display: block;
+    /* display:noneの解除 */
     background: #efefef;
   }
+
   .bc-container {
     margin: 0 auto;
     padding: 12px 20px;
@@ -91,14 +102,16 @@ img {
 .page-bottom {
   background: url(../images/bottom-bg.svg);
 }
+
 .bottom-container {
   padding: 60px 4% 0 4%;
 }
+
 @media (min-width: 768px) {
   .bottom-container {
-      margin: 0 auto;
-      padding: 60px 20px 0 20px;
-      max-width: 1040px;
+    margin: 0 auto;
+    padding: 60px 20px 0 20px;
+    max-width: 1040px;
   }
 }
 
@@ -117,14 +130,16 @@ img {
 .page-footer {
   background: #000;
 }
+
 .footer-container {
   padding: 60px 4%;
 }
+
 @media (min-width: 768px) {
   .footer-container {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 60px 20px;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 60px 20px;
   }
 }
 
@@ -138,73 +153,82 @@ img {
  * メインコンテナ
  * ***************************************
  */
- /**
+/**
   * ***************************************
   * ［post.html］記事ページ - メインコンテナ
   * ***************************************
   */
- .post .main-container {
-   padding: 80px 4% 0 4%;
-   background: url(../images/post-bg.svg) repeat-x;
-   background-position: 0 10px;
- }
- @media (min-width: 768px) {
-   .post .main-container {
-     max-width: 1040px;
-     margin: 0 auto;
-     padding: 80px 20px 0 20px;
-   }
- }
+.post .main-container {
+  padding: 80px 4% 0 4%;
+  background: url(../images/post-bg.svg) repeat-x;
+  background-position: 0 10px;
+}
 
- /**
+@media (min-width: 768px) {
+  .post .main-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 80px 20px 0 20px;
+  }
+}
+
+/**
   * ---------------------------------------
   * ［post.html］記事ページ - モジュール
   */
 
- /**
+/**
   * ---------------------------------------
   * ポストヘッダー
   */
- .post-header {
-   margin-bottom: 60px;
- }
- .post-header h1 {
-   margin: 0 0 20px 0;/* h1のデフォルト設定オフ */
-   font-size: 1.875rem;
-   line-height: 1.5;
- }
+.post-header {
+  margin-bottom: 60px;
+}
 
- /**
+.post-header h1 {
+  margin: 0 0 20px 0;
+  /* h1のデフォルト設定オフ */
+  font-size: 1.875rem;
+  line-height: 1.5;
+}
+
+/**
   * ---------------------------------------
   * ポストコンテンツ
   */
- .post-contents {
-   margin: 0 0 60px 0;
- }
- @media (min-width: 768px) {
-   .post-contents {
-     max-width: 600px;
-     margin: 0 auto 60px auto;
-   }
- }
- /* post-contentsの1つ目の要素の上マージンを0にする */
- .post-contents > *:first-child {
-   margin-top: 0;
- }
- /* h2 */
- .post-contents h2 {
-   margin: 60px 0 30px 0;
-   padding: 1rem 0;
-   border-top: 1px solid #000;
-   border-bottom: 1px solid #000;
-   font-size: 1.25rem;
- }
- /* p */
- .post-contents p {
-   margin: 30px 0;
-   line-height: 1.9;
-   text-align: justify;
- }
+.post-contents {
+  margin: 0 0 60px 0;
+}
+
+@media (min-width: 768px) {
+  .post-contents {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+}
+
+/* post-contentsの1つ目の要素の上マージンを0にする */
+.post-contents>*:first-child {
+  margin-top: 0;
+}
+
+/* h2 */
+.post-contents h2 {
+  margin: 60px 0 30px 0;
+  padding: 1rem 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  /* 全体からの大きさを考慮して、remで設定している！ */
+  font-size: 1.25rem;
+}
+
+/* p */
+.post-contents p {
+  margin: 30px 0;
+  line-height: 1.9;
+  /* 両端揃えとするために、以下のように設定！ */
+  text-align: justify;
+}
 
 /**
 * ---------------------------------------
@@ -213,6 +237,7 @@ img {
 .post-footer {
   margin: 0 0 60px 0;
 }
+
 @media (min-width: 768px) {
   .post-footer {
     max-width: 600px;
